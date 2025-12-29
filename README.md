@@ -1,153 +1,110 @@
-# 🚲 Seoul Bike Sharing Demand Analysis (Tableau)
+# 📊 Seoul Bike Sharing Demand Analysis (Tableau)
 
-## 📌 Project Goal
+## 📌 Project Overview
+This project analyzes bike-sharing demand in Seoul using hourly rental data combined with weather and seasonal information. The objective is to understand **when**, **why**, and **under what conditions** bike demand changes in order to support better operational planning and resource allocation.
 
-Analyze bike rental demand in **Seoul** to understand usage patterns across time, seasons, holidays, and weather conditions, and translate insights into actionable planning support for bike-sharing operations.
+---
+
+## 🎯 Project Goal
+Analyze bike rental demand patterns across time, seasons, and weather conditions to identify peak usage periods and key factors influencing demand.
 
 ---
 
 ## 🏢 Business Problem
-
-Bike-sharing systems face operational challenges such as:
-
-* When to allocate more bikes
-* How demand changes by hour, season, and holidays
-* How external factors like weather impact rentals
-
-This project focuses on identifying **when and why bike demand changes**, helping operators make data-driven decisions on bike availability and resource planning.
+Bike-sharing demand fluctuates significantly based on time of day, season, holidays, and weather conditions. Without understanding these patterns, operators risk bike shortages during peak hours and underutilization during low-demand periods. This analysis helps support efficient bike allocation and operational decision-making.
 
 ---
 
-## 📂 Dataset
+## 🧩 Dataset
+- **Source:** Seoul Bike Sharing Demand Dataset (CSV)
+- **Granularity:** Hourly rental data
+- **Key Fields:**
+  - Date & Hour
+  - Rented Bike Count
+  - Temperature
+  - Weather Conditions
+  - Season
+  - Holiday Indicator
 
-* **Source:** Seoul Bike Sharing dataset
-* **Granularity:** Hourly rental data
-* **Key Attributes:**
-
-  * Date & Hour
-  * Season
-  * Holiday / Non-Holiday
-  * Weather conditions (Temperature, Humidity, etc.)
-  * Rented Bike Count
-
-The dataset provides sufficient detail to perform time-based and condition-based demand analysis without extensive preprocessing.
-
----
-
-## 🔗 Data Connection & Validation
-
-* Connected the cleaned CSV dataset directly to **Tableau**
-* Verified correct data types for dates, numeric measures, and categorical dimensions
-* Ensured consistency in hourly and seasonal records to avoid aggregation errors
+The dataset was well-structured and connected directly to Tableau without heavy preprocessing.
 
 ---
 
-## 📊 Key Metric (KPI)
-
-* **Total Rented Bike Count**
-  Used as the primary KPI to measure overall bike-sharing demand across different dimensions.
-
----
-
-## 🧩 Key Dimensions Analyzed
-
-* Hour of Day
-* Date
-* Season
-* Holiday vs Non-Holiday
-* Weather Conditions
-
-These dimensions enable granular analysis of demand fluctuations and user behavior.
+## 📈 Key Metric (KPI)
+- **Total Rented Bike Count**  
+  Represents overall bike-sharing demand and serves as the primary performance indicator.
 
 ---
 
-## 📈 Visualizations & Dashboards
+## 🔍 Key Dimensions
+- Hour of Day  
+- Date  
+- Season  
+- Holiday vs Non-Holiday  
+- Weather & Temperature  
 
-### 1️⃣ Hourly Demand Analysis
-
-![Hourly Demand](Images/dashboard_1.png)
-
-* Line chart showing bike demand by hour
-* Clearly highlights **peak and off-peak usage hours**
-* Useful for daily bike redistribution planning
-
----
-
-### 2️⃣ Seasonal Demand Patterns
-
-![Seasonal Demand](Images/dashboard_2.png)
-
-* Bar chart comparing rentals across seasons
-* Reveals strong **seasonal trends** affecting bike usage
-* Helps anticipate high-demand and low-demand periods
+These dimensions enable time-based and condition-based demand analysis.
 
 ---
 
-### 3️⃣ Holiday vs Non-Holiday Usage
+## 📊 Dashboards & Visualizations
 
-![Holiday Analysis](Images/dashboard_3.png)
+### 🔹 Demand Forecasting
+![Demand Forecasting](Images/Demand%20Forecasting.png)
 
-* Bar chart comparing demand on holidays vs regular days
-* Shows behavioral differences in bike usage
-* Useful for adjusting weekend and holiday operations
-
----
-
-### 4️⃣ Weather Impact on Demand
-
-![Weather Impact](Images/dashboard_4.png)
-
-* Scatter / line-based analysis of weather conditions vs demand
-* Identifies how environmental factors influence ridership
-* Supports proactive planning during adverse weather
+**Description:**  
+Shows hourly demand trends to identify peak and off-peak usage periods.
 
 ---
 
-## 🧠 Analysis Logic & Design Choices
+### 🔹 Demand by Day
+![Demand by Day](Images/Demand%20by%20Day.png)
 
-* **Aggregations Used:** SUM and AVG
-* **Calculated Fields:** Not required (dataset already well-structured)
-* **Filters:** Season, Hour
-* **Dashboard Actions:** Interactive filtering between charts
-
-These choices keep the dashboards intuitive, responsive, and interview-friendly.
+**Description:**  
+Compares bike rental demand across different days, highlighting differences between holidays and regular days.
 
 ---
 
-## 🔍 Key Insights
+### 🔹 Temperature Variations
+![Temperature Variations](Images/Temperature%20Variations.png)
 
-* Bike demand peaks during specific **commute hours**
-* **Seasonality** plays a major role in rental volume
-* Demand differs noticeably on **holidays vs non-holidays**
-* Weather conditions have a measurable impact on ridership
-
----
-
-## 🎯 Final Output
-
-* Fully interactive **Tableau dashboards**
-* Clear KPI-driven analysis
-* Decision-support tool for operational planning
+**Description:**  
+Visualizes the relationship between temperature changes and bike rental demand.
 
 ---
 
-## 🛠 Tools Used
+### 🔹 Weather Conditions
+![Weather Conditions](Images/Weather%20Conditions.png)
 
-* Tableau
-* Excel / CSV
-
----
-
-## 🧑‍💼 Interview Summary
-
-This project demonstrates:
-
-* Business-oriented analytical thinking
-* Strong Tableau dashboard design
-* Ability to convert raw data into actionable insights
-
-It can be clearly explained end-to-end in interviews, from business problem to visualization-driven insights.
+**Description:**  
+Analyzes bike demand across different weather conditions to understand weather impact on user behavior.
 
 ---
 
-📌 *Note: Tableau packaged workbook (.twbx) is available in the repository for direct interaction.*
+## 🛠 Tableau Implementation
+- Connected cleaned dataset directly to Tableau
+- Validated correct data types for dates, measures, and dimensions
+- Built individual worksheets before combining them into dashboards
+- Used **SUM** and **AVG** aggregations for analysis
+- Added filters and dashboard actions for interactive exploration
+
+---
+
+## 💡 Key Insights
+- Bike demand peaks during specific morning and evening hours
+- Seasonal patterns significantly influence rental volume
+- Weather and temperature have a clear impact on usage
+- Holiday demand differs from regular working days
+
+---
+
+## 📦 Final Output
+An interactive Tableau dashboard that enables stakeholders to explore bike-sharing demand dynamically and supports data-driven operational planning.
+
+---
+
+## 🚀 How to View the Dashboard
+1. Download the `.twbx` file from the `Tableau/` folder  
+2. Open it using **Tableau Public** or **Tableau Desktop**
+
+---
