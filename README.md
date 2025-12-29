@@ -5,6 +5,12 @@ This project analyzes bike-sharing demand in Seoul using hourly rental data comb
 
 ---
 
+## 🔗 Tableau Public Dashboard
+View the interactive dashboard on Tableau Public:  
+https://public.tableau.com/app/profile/satya.sai.pranai.basava/viz/Tableau-Seoul-Bike-Sharing/Story1
+
+---
+
 ## 🎯 Project Goal
 Analyze bike rental demand patterns across time, seasons, and weather conditions to identify peak usage periods and key factors influencing demand.
 
